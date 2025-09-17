@@ -35,7 +35,7 @@ export default function ProductForm() {
       setLoading(true);
       let imageUrl = "";
       if (form.image) {
-        imageUrl = await uploadImageToCloudinary(form.image); // ← Cloudinary
+        imageUrl = await uploadImageToCloudinary(form.image);
       }
       await addDoc(collection(db, "products"), {
         name: form.name,
